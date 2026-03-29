@@ -18,6 +18,12 @@ interface ElectionRow {
 }
 
 type RawRow = Record<string, string | number | null | undefined>;
+type RawValue = string | number | null | undefined;
+
+const toText = (value: RawValue, fallback = "—") => {
+  if (value == null) return fallback;
+  return typeof value === "string" ? value : String(value);
+};
 
 async function loadAllData(): Promise<ElectionRow[]> {
   const rows: ElectionRow[] = [];
@@ -26,30 +32,18 @@ async function loadAllData(): Promise<ElectionRow[]> {
   try {
     const ls = (await fetch("/data/processed/loksabha.json").then(r => r.json())) as RawRow[];
     ls.forEach((r) => {
-      const candidateRaw = r["BJP/NDA Candidate Name"];
-      const voteShareRaw = r["Vote Share %"];
-      const candidate =
-        typeof candidateRaw === "string"
-          ? candidateRaw
-          : candidateRaw == null
-            ? ""
-            : String(candidateRaw);
-      const voteShare =
-        typeof voteShareRaw === "string"
-          ? voteShareRaw
-          : voteShareRaw == null
-            ? ""
-            : String(voteShareRaw);
+      const candidate = toText(r["BJP/NDA Candidate Name"], "");
+      const voteShare = toText(r["Vote Share %"], "");
       // Skip rows where NDA didn't field a candidate (those are opposition winner context rows)
       if (!candidate.trim() && !voteShare) return;
       const year = r.Year ?? r.year;
       rows.push({
         year: year ?? "—",
         type: "Lok Sabha",
-        constituency: r["Constituency Name"] ?? r.constituency ?? r.name ?? "—",
+        constituency: toText(r["Constituency Name"] ?? r.constituency ?? r.name, "—"),
         candidate: candidate || "—",
-        party: r["Party Label"] ?? r.party ?? "BJP",
-        voteShare: voteShare !== "" && voteShare !== null ? `${voteShare}%` : "—",
+        party: toText(r["Party Label"] ?? r.party, "BJP"),
+        voteShare: voteShare ? `${voteShare}%` : "—",
         position: r.Position ?? r.position,
       });
     });
@@ -63,10 +57,10 @@ async function loadAllData(): Promise<ElectionRow[]> {
       rows.push({
         year: year ?? "—",
         type: "Assembly",
-        constituency: r["Constituency Name"] ?? r.constituency ?? r.name ?? "—",
-        candidate: r["BJP/NDA Candidate Name"] ?? r.candidate ?? "—",
-        party: r["Party Label"] ?? r.party ?? "BJP",
-        voteShare: r["Vote Share %"] ?? r.voteShare ?? "—",
+        constituency: toText(r["Constituency Name"] ?? r.constituency ?? r.name, "—"),
+        candidate: toText(r["BJP/NDA Candidate Name"] ?? r.candidate, "—"),
+        party: toText(r["Party Label"] ?? r.party, "BJP"),
+        voteShare: toText(r["Vote Share %"] ?? r.voteShare, "—"),
         position: r.Position ?? r.position,
       });
     });
@@ -77,13 +71,14 @@ async function loadAllData(): Promise<ElectionRow[]> {
     const corp = (await fetch("/data/processed/corporations_summary.json").then(r => r.json())) as RawRow[];
     corp.forEach((r) => {
       const year = r.Year ?? r.year;
+      const ndaWards = toText(r["NDA_Wards"], "");
       rows.push({
         year: year ?? "—",
         type: "Corporation",
-        constituency: r.Corporation ?? r.name ?? "—",
+        constituency: toText(r.Corporation ?? r.name, "—"),
         candidate: "—",
         party: "BJP/NDA",
-        voteShare: r["NDA_Wards"] != null ? `${r["NDA_Wards"]} wards` : "—",
+        voteShare: ndaWards ? `${ndaWards} wards` : "—",
       });
     });
   } catch {}
