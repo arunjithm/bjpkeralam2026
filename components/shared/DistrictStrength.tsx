@@ -83,7 +83,7 @@ export default function DistrictStrength() {
                   <span className="inline-block font-mono font-black leading-none text-gold"
                     style={{
                       fontSize: "2.8rem",
-                      filter: d.share2024 > 25 ? "drop-shadow(0 0 15px rgba(255,153,51,0.5))" : "none",
+                      filter: share2024Value > 25 ? "drop-shadow(0 0 15px rgba(255,153,51,0.5))" : "none",
                     }}>
                     {d.share2024 == null ? "—" : d.share2024}
                     {d.share2024 == null ? null : <span style={{ fontSize: "55%", opacity: 0.8 }}>%</span>}
