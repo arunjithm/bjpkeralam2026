@@ -42,8 +42,9 @@ async function loadAllData(): Promise<ElectionRow[]> {
             : String(voteShareRaw);
       // Skip rows where NDA didn't field a candidate (those are opposition winner context rows)
       if (!candidate.trim() && !voteShare) return;
+      const year = r.Year ?? r.year;
       rows.push({
-        year: r.Year ?? r.year,
+        year: year ?? "—",
         type: "Lok Sabha",
         constituency: r["Constituency Name"] ?? r.constituency ?? r.name ?? "—",
         candidate: candidate || "—",
@@ -58,8 +59,9 @@ async function loadAllData(): Promise<ElectionRow[]> {
   try {
     const assembly = (await fetch("/data/processed/assembly.json").then(r => r.json())) as RawRow[];
     assembly.forEach((r) => {
+      const year = r.Year ?? r.year;
       rows.push({
-        year: r.Year ?? r.year,
+        year: year ?? "—",
         type: "Assembly",
         constituency: r["Constituency Name"] ?? r.constituency ?? r.name ?? "—",
         candidate: r["BJP/NDA Candidate Name"] ?? r.candidate ?? "—",
@@ -74,8 +76,9 @@ async function loadAllData(): Promise<ElectionRow[]> {
   try {
     const corp = (await fetch("/data/processed/corporations_summary.json").then(r => r.json())) as RawRow[];
     corp.forEach((r) => {
+      const year = r.Year ?? r.year;
       rows.push({
-        year: r.Year ?? r.year,
+        year: year ?? "—",
         type: "Corporation",
         constituency: r.Corporation ?? r.name ?? "—",
         candidate: "—",
