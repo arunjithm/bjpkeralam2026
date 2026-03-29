@@ -1,0 +1,1213 @@
+[
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Municipality": "Alappuzha",
+    "Total_Wards": 52,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Municipality": "Chengannur",
+    "Total_Wards": 27,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Municipality": "Cherthala",
+    "Total_Wards": 35,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Municipality": "Haripad",
+    "Total_Wards": 29,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Municipality": "Kayamkulam",
+    "Total_Wards": 44,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Municipality": "Mavelikara",
+    "Total_Wards": 28,
+    "NDA_Wards": 8
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Aluva",
+    "Total_Wards": 25,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Angamaly",
+    "Total_Wards": 30,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Eloor",
+    "Total_Wards": 31,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Kalamassery",
+    "Total_Wards": 42,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Koothattukulam",
+    "Total_Wards": 25,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Kothamangalam",
+    "Total_Wards": 31,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Maradu",
+    "Total_Wards": 33,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Muvattupuzha",
+    "Total_Wards": 28,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "North Paravur",
+    "Total_Wards": 29,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Perumbavoor",
+    "Total_Wards": 27,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Piravom",
+    "Total_Wards": 27,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Thrikkakara",
+    "Total_Wards": 43,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Municipality": "Tripunithura",
+    "Total_Wards": 49,
+    "NDA_Wards": 12
+  },
+  {
+    "Year": "2015",
+    "District": "Idukki",
+    "Municipality": "Kattappana",
+    "Total_Wards": 34,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Idukki",
+    "Municipality": "Thodupuzha",
+    "Total_Wards": 35,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Anthoor",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Iritty",
+    "Total_Wards": 33,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Kuthuparamba",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Panoor",
+    "Total_Wards": 40,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Payyannur",
+    "Total_Wards": 44,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Sreekandapuram",
+    "Total_Wards": 30,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Thalassery",
+    "Total_Wards": 52,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2015",
+    "District": "Kannur",
+    "Municipality": "Thalipparamba",
+    "Total_Wards": 34,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Kasargode",
+    "Municipality": "Kanhangad",
+    "Total_Wards": 43,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2015",
+    "District": "Kasargode",
+    "Municipality": "Kasaragod",
+    "Total_Wards": 38,
+    "NDA_Wards": 13
+  },
+  {
+    "Year": "2015",
+    "District": "Kasargode",
+    "Municipality": "Nileshwar",
+    "Total_Wards": 32,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kollam",
+    "Municipality": "Karunagappally",
+    "Total_Wards": 35,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Kollam",
+    "Municipality": "Kottarakara",
+    "Total_Wards": 29,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Kollam",
+    "Municipality": "Paravur",
+    "Total_Wards": 32,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Kollam",
+    "Municipality": "Punalur",
+    "Total_Wards": 35,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Municipality": "Changanassery",
+    "Total_Wards": 37,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Municipality": "Erattupetta",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Municipality": "Ettumanoor",
+    "Total_Wards": 35,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Municipality": "Kottayam",
+    "Total_Wards": 52,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Municipality": "Pala",
+    "Total_Wards": 26,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Municipality": "Vaikom",
+    "Total_Wards": 26,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Feroke",
+    "Total_Wards": 38,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Koduvally",
+    "Total_Wards": 36,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Koyilandy",
+    "Total_Wards": 44,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Mukkam",
+    "Total_Wards": 33,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Payyoli",
+    "Total_Wards": 36,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Ramanattukara",
+    "Total_Wards": 31,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Kozhikode",
+    "Municipality": "Vadakara",
+    "Total_Wards": 47,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Kondotty",
+    "Total_Wards": 40,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Kottakkal",
+    "Total_Wards": 32,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Malappuram",
+    "Total_Wards": 40,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Manjeri",
+    "Total_Wards": 50,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Nilambur",
+    "Total_Wards": 33,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Parappanangadi",
+    "Total_Wards": 45,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Perinthalmanna",
+    "Total_Wards": 34,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Ponnani",
+    "Total_Wards": 51,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Tanur",
+    "Total_Wards": 44,
+    "NDA_Wards": 10
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Tirur",
+    "Total_Wards": 38,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Tirurangadi",
+    "Total_Wards": 39,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Malappuram",
+    "Municipality": "Valanchery",
+    "Total_Wards": 33,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Cherpulassery",
+    "Total_Wards": 33,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Chittur Tattamangalam",
+    "Total_Wards": 29,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Mannarkad",
+    "Total_Wards": 29,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Ottapalam",
+    "Total_Wards": 36,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Palakkad",
+    "Total_Wards": 52,
+    "NDA_Wards": 24
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Pattambi",
+    "Total_Wards": 28,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Municipality": "Shoranur",
+    "Total_Wards": 33,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2015",
+    "District": "Pathanamthitta",
+    "Municipality": "Adoor",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Pathanamthitta",
+    "Municipality": "Pandalam",
+    "Total_Wards": 33,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2015",
+    "District": "Pathanamthitta",
+    "Municipality": "Pathanamthitta",
+    "Total_Wards": 32,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Pathanamthitta",
+    "Municipality": "Thiruvalla",
+    "Total_Wards": 39,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Attingal",
+    "Total_Wards": 31,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Nedumangad",
+    "Total_Wards": 39,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2015",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Neyyattinkara",
+    "Total_Wards": 44,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2015",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Varkala",
+    "Total_Wards": 33,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Chalakudy",
+    "Total_Wards": 36,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Chavakkad",
+    "Total_Wards": 32,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Guruvayur",
+    "Total_Wards": 43,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Irinjalakuda",
+    "Total_Wards": 41,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Kodungallur",
+    "Total_Wards": 44,
+    "NDA_Wards": 16
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Kunnamkulam",
+    "Total_Wards": 37,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Municipality": "Wadakanchery",
+    "Total_Wards": 41,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "District": "Wayanad",
+    "Municipality": "Kalpetta",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Wayanad",
+    "Municipality": "Mananthavady",
+    "Total_Wards": 36,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "District": "Wayanad",
+    "Municipality": "Sulthan Bathery",
+    "Total_Wards": 35,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Municipality": "Alappuzha",
+    "Total_Wards": 52,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Municipality": "Chengannur",
+    "Total_Wards": 27,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Municipality": "Cherthala",
+    "Total_Wards": 35,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Municipality": "Haripad",
+    "Total_Wards": 29,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Municipality": "Kayamkulam",
+    "Total_Wards": 44,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Municipality": "Mavelikara",
+    "Total_Wards": 28,
+    "NDA_Wards": 9
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Aluva",
+    "Total_Wards": 26,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Angamaly",
+    "Total_Wards": 30,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Eloor",
+    "Total_Wards": 31,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Kalamassery",
+    "Total_Wards": 42,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Koothattukulam",
+    "Total_Wards": 25,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Kothamangalam",
+    "Total_Wards": 31,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Maradu",
+    "Total_Wards": 33,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Muvattupuzha",
+    "Total_Wards": 28,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "North Paravur",
+    "Total_Wards": 29,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Perumbavoor",
+    "Total_Wards": 27,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Piravom",
+    "Total_Wards": 27,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Thrikkakara",
+    "Total_Wards": 43,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Municipality": "Tripunithura",
+    "Total_Wards": 49,
+    "NDA_Wards": 17
+  },
+  {
+    "Year": "2020",
+    "District": "Idukki",
+    "Municipality": "Kattappana",
+    "Total_Wards": 34,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Idukki",
+    "Municipality": "Thodupuzha",
+    "Total_Wards": 35,
+    "NDA_Wards": 8
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Anthoor",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Iritty",
+    "Total_Wards": 33,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Kuthuparamba",
+    "Total_Wards": 28,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Mattanur",
+    "Total_Wards": 35,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Panoor",
+    "Total_Wards": 40,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Payyannur",
+    "Total_Wards": 44,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Sreekandapuram",
+    "Total_Wards": 30,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Thalassery",
+    "Total_Wards": 52,
+    "NDA_Wards": 8
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Municipality": "Thalipparamba",
+    "Total_Wards": 34,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Kasargode",
+    "Municipality": "Kanhangad",
+    "Total_Wards": 42,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2020",
+    "District": "Kasargode",
+    "Municipality": "Kasaragod",
+    "Total_Wards": 37,
+    "NDA_Wards": 14
+  },
+  {
+    "Year": "2020",
+    "District": "Kasargode",
+    "Municipality": "Nileshwar",
+    "Total_Wards": 32,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kollam",
+    "Municipality": "Karunagappally",
+    "Total_Wards": 35,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2020",
+    "District": "Kollam",
+    "Municipality": "Kottarakara",
+    "Total_Wards": 29,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2020",
+    "District": "Kollam",
+    "Municipality": "Paravur",
+    "Total_Wards": 32,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2020",
+    "District": "Kollam",
+    "Municipality": "Punalur",
+    "Total_Wards": 35,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Municipality": "Changanassery",
+    "Total_Wards": 37,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Municipality": "Erattupetta",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Municipality": "Ettumanoor",
+    "Total_Wards": 35,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Municipality": "Kottayam",
+    "Total_Wards": 52,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Municipality": "Pala",
+    "Total_Wards": 26,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Municipality": "Vaikom",
+    "Total_Wards": 26,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Feroke",
+    "Total_Wards": 38,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Koduvally",
+    "Total_Wards": 36,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Koyilandy",
+    "Total_Wards": 44,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Mukkam",
+    "Total_Wards": 33,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Payyoli",
+    "Total_Wards": 36,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Ramanattukara",
+    "Total_Wards": 31,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Municipality": "Vadakara",
+    "Total_Wards": 47,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Kondotty",
+    "Total_Wards": 40,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Kottakkal",
+    "Total_Wards": 32,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Malappuram",
+    "Total_Wards": 40,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Manjeri",
+    "Total_Wards": 50,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Nilambur",
+    "Total_Wards": 33,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Parappanangadi",
+    "Total_Wards": 45,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Perinthalmanna",
+    "Total_Wards": 34,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Ponnani",
+    "Total_Wards": 51,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Tanur",
+    "Total_Wards": 44,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Tirur",
+    "Total_Wards": 38,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Tirurangadi",
+    "Total_Wards": 39,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Municipality": "Valanchery",
+    "Total_Wards": 33,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Cherpulassery",
+    "Total_Wards": 33,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Chittur Tattamangalam",
+    "Total_Wards": 29,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Mannarkad",
+    "Total_Wards": 29,
+    "NDA_Wards": 3
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Ottapalam",
+    "Total_Wards": 36,
+    "NDA_Wards": 9
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Palakkad",
+    "Total_Wards": 52,
+    "NDA_Wards": 28
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Pattambi",
+    "Total_Wards": 28,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Municipality": "Shoranur",
+    "Total_Wards": 33,
+    "NDA_Wards": 9
+  },
+  {
+    "Year": "2020",
+    "District": "Pathanamthitta",
+    "Municipality": "Adoor",
+    "Total_Wards": 28,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Pathanamthitta",
+    "Municipality": "Pandalam",
+    "Total_Wards": 33,
+    "NDA_Wards": 18
+  },
+  {
+    "Year": "2020",
+    "District": "Pathanamthitta",
+    "Municipality": "Pathanamthitta",
+    "Total_Wards": 32,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Pathanamthitta",
+    "Municipality": "Thiruvalla",
+    "Total_Wards": 39,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2020",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Attingal",
+    "Total_Wards": 31,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2020",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Nedumangad",
+    "Total_Wards": 39,
+    "NDA_Wards": 4
+  },
+  {
+    "Year": "2020",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Neyyattinkara",
+    "Total_Wards": 44,
+    "NDA_Wards": 9
+  },
+  {
+    "Year": "2020",
+    "District": "Thiruvananthapuram",
+    "Municipality": "Varkala",
+    "Total_Wards": 33,
+    "NDA_Wards": 11
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Chalakudy",
+    "Total_Wards": 36,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Chavakkad",
+    "Total_Wards": 32,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Guruvayur",
+    "Total_Wards": 43,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Irinjalakuda",
+    "Total_Wards": 41,
+    "NDA_Wards": 8
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Kodungallur",
+    "Total_Wards": 44,
+    "NDA_Wards": 21
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Kunnamkulam",
+    "Total_Wards": 37,
+    "NDA_Wards": 8
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Municipality": "Wadakanchery",
+    "Total_Wards": 41,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "District": "Wayanad",
+    "Municipality": "Kalpetta",
+    "Total_Wards": 28,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Wayanad",
+    "Municipality": "Mananthavady",
+    "Total_Wards": 36,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2020",
+    "District": "Wayanad",
+    "Municipality": "Sulthan Bathery",
+    "Total_Wards": 35,
+    "NDA_Wards": 0
+  }
+]

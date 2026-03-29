@@ -1,0 +1,104 @@
+[
+  {
+    "Year": "2010",
+    "Corporation": "Ernakulam",
+    "Total_Wards": 74,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2010",
+    "Corporation": "Kollam",
+    "Total_Wards": 55,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2010",
+    "Corporation": "Kozhikode",
+    "Total_Wards": 75,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2010",
+    "Corporation": "Thiruvananthapuram",
+    "Total_Wards": 100,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2010",
+    "Corporation": "Thrissur",
+    "Total_Wards": 55,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2015",
+    "Corporation": "Ernakulam",
+    "Total_Wards": 73,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "Corporation": "Kannur",
+    "Total_Wards": 55,
+    "NDA_Wards": 0
+  },
+  {
+    "Year": "2015",
+    "Corporation": "Kollam",
+    "Total_Wards": 55,
+    "NDA_Wards": 2
+  },
+  {
+    "Year": "2015",
+    "Corporation": "Kozhikode",
+    "Total_Wards": 75,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2015",
+    "Corporation": "Thiruvananthapuram",
+    "Total_Wards": 99,
+    "NDA_Wards": 35
+  },
+  {
+    "Year": "2015",
+    "Corporation": "Thrissur",
+    "Total_Wards": 55,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2020",
+    "Corporation": "Ernakulam",
+    "Total_Wards": 74,
+    "NDA_Wards": 5
+  },
+  {
+    "Year": "2020",
+    "Corporation": "Kannur",
+    "Total_Wards": 55,
+    "NDA_Wards": 1
+  },
+  {
+    "Year": "2020",
+    "Corporation": "Kollam",
+    "Total_Wards": 55,
+    "NDA_Wards": 6
+  },
+  {
+    "Year": "2020",
+    "Corporation": "Kozhikode",
+    "Total_Wards": 75,
+    "NDA_Wards": 7
+  },
+  {
+    "Year": "2020",
+    "Corporation": "Thiruvananthapuram",
+    "Total_Wards": 100,
+    "NDA_Wards": 35
+  },
+  {
+    "Year": "2020",
+    "Corporation": "Thrissur",
+    "Total_Wards": 55,
+    "NDA_Wards": 6
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "ls_vote_share": [
+    {
+      "year": "1977",
+      "share": 2.9,
+      "label": "Jana Sangh era"
+    },
+    {
+      "year": "1980",
+      "share": 1.1,
+      "label": "Party split"
+    },
+    {
+      "year": "1984",
+      "share": 0.8,
+      "label": "Historic low"
+    },
+    {
+      "year": "1989",
+      "share": 3.2,
+      "label": "Slow start"
+    },
+    {
+      "year": "1991",
+      "share": 4.9,
+      "label": "Babri aftermath"
+    },
+    {
+      "year": "1996",
+      "share": 7.6,
+      "label": "Gradual climb"
+    },
+    {
+      "year": "1998",
+      "share": 7.2,
+      "label": "Stable base"
+    },
+    {
+      "year": "1999",
+      "share": 9.3,
+      "label": "Alliance boost"
+    },
+    {
+      "year": "2004",
+      "share": 10.0,
+      "label": "Double digits"
+    },
+    {
+      "year": "2009",
+      "share": 6.3,
+      "label": "UPA wave dip"
+    },
+    {
+      "year": "2014",
+      "share": 10.3,
+      "label": "Modi wave"
+    },
+    {
+      "year": "2019",
+      "share": 13.0,
+      "label": "Sabarimala surge"
+    },
+    {
+      "year": "2024",
+      "share": 16.7,
+      "label": "First MP won"
+    }
+  ],
+  "assembly_vote_share": [
+    {
+      "year": "2001",
+      "share": 5.0,
+      "label": ""
+    },
+    {
+      "year": "2006",
+      "share": 4.7,
+      "label": ""
+    },
+    {
+      "year": "2011",
+      "share": 6.1,
+      "label": ""
+    },
+    {
+      "year": "2016",
+      "share": 10.5,
+      "label": "First seat won (Nemom)"
+    },
+    {
+      "year": "2021",
+      "share": 11.3,
+      "label": "Vote share held"
+    }
+  ],
+  "ward_wins_tvm": [
+    {
+      "year": "2010",
+      "wards": 6,
+      "label": "First presence"
+    },
+    {
+      "year": "2015",
+      "wards": 34,
+      "label": "467% surge"
+    },
+    {
+      "year": "2020",
+      "wards": 28,
+      "label": "Slightly down"
+    }
+  ],
+  "ls_seats": [
+    {
+      "year": "2014",
+      "seats": 0,
+      "contested": 20,
+      "share": 10.3
+    },
+    {
+      "year": "2019",
+      "seats": 0,
+      "contested": 20,
+      "share": 13.0
+    },
+    {
+      "year": "2024",
+      "seats": 1,
+      "contested": 20,
+      "share": 16.7
+    }
+  ]
+}

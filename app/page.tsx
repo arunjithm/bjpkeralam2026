@@ -1,101 +1,70 @@
-import Image from "next/image";
+import ActIBeforeDawn from "@/components/acts/ActI_BeforeDawn";
+import CredibilityBanner from "@/components/shared/CredibilityBanner";
+import FortyFourYearWall from "@/components/shared/FortyFourYearWall";
+import NearMissGallery from "@/components/shared/NearMissGallery";
+import ThrissurDeepDive from "@/components/shared/ThrissurDeepDive";
+import OneVoteAtATime from "@/components/shared/OneVoteAtATime";
+import ShareableMoments from "@/components/shared/ShareableMoments";
+import GrowthSection from "@/components/shared/GrowthSection";
+import GrassrootsGrowth from "@/components/shared/GrassrootsGrowth";
+import VoteShiftFlow from "@/components/shared/VoteShiftFlow";
+import DistrictStrength from "@/components/shared/DistrictStrength";
+import ElectionSandbox from "@/components/shared/ElectionSandbox";
+import OppositionClaims from "@/components/shared/OppositionClaims";
+import EventTimeline from "@/components/shared/EventTimeline";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen text-white font-sans overflow-x-hidden">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      {/* 1 — Hero: dramatic hook, counters, journey strip */}
+      <ActIBeforeDawn />
+
+      {/* 2 — Credibility banner */}
+      <CredibilityBanner />
+
+      {/* 3 — The 44-year wall */}
+      <FortyFourYearWall />
+
+      {/* 4 — Near-Miss Gallery: razor-thin contests */}
+      <NearMissGallery />
+
+      {/* 5 — Thrissur Deep Dive: "Digital Scrollytelling" of the first MP win */}
+      <ThrissurDeepDive />
+
+      {/* 6 — One Vote at a Time: Human section */}
+      <OneVoteAtATime />
+
+      {/* 7 — Shareable Moments */}
+      <ShareableMoments />
+
+      {/* 8 — Growth charts + 2025 TVM banner + 2024 Thrissur card */}
+      <GrowthSection />
+
+      {/* 9 — Grassroots Growth: The 1919 ward silent revolution (2010-2025) */}
+      <GrassrootsGrowth />
+
+      {/* 10 — Vote Shift Flow: The erosion of the duopoly */}
+      <VoteShiftFlow />
+
+      {/* 11 — District-wise strength tiles */}
+      <DistrictStrength />
+
+      {/* 12 — Election Sandbox: Predict 2026 results */}
+      <ElectionSandbox />
+
+      {/* 13 — "They Said It Would Never Happen" opposition claims */}
+      <OppositionClaims />
+
+      {/* 14 — Vertical timeline: Zero to One */}
+      <EventTimeline />
+
+      <footer className="py-20 border-t text-center text-sm"
+        style={{ borderColor: "rgba(255,153,51,0.05)", color: "rgba(255,200,120,0.2)" }}>
+        <p className="font-heading font-black tracking-widest text-[10px] uppercase mb-4 opacity-50">Keralam&apos;s Saffron Dawn</p>
+        <p className="max-w-md mx-auto opacity-40">All electoral data sourced from the Election Commission of India and verified national news reports.</p>
+        <p className="mt-4 opacity-30 italic">Developed for accuracy, transparency, and data-driven journalism.</p>
       </footer>
-    </div>
+    </main>
   );
 }

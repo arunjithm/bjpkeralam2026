@@ -1,0 +1,140 @@
+[
+  {
+    "Year": "2015",
+    "District": "Alappuzha",
+    "Total_Wards": 1153,
+    "NDA_Wards": 103
+  },
+  {
+    "Year": "2015",
+    "District": "Ernakulam",
+    "Total_Wards": 1338,
+    "NDA_Wards": 47
+  },
+  {
+    "Year": "2015",
+    "District": "Idukki",
+    "Total_Wards": 789,
+    "NDA_Wards": 22
+  },
+  {
+    "Year": "2015",
+    "District": "Kollam",
+    "Total_Wards": 1233,
+    "NDA_Wards": 81
+  },
+  {
+    "Year": "2015",
+    "District": "Kottayam",
+    "Total_Wards": 1125,
+    "NDA_Wards": 72
+  },
+  {
+    "Year": "2015",
+    "District": "Palakkad",
+    "Total_Wards": 1489,
+    "NDA_Wards": 85
+  },
+  {
+    "Year": "2015",
+    "District": "Pathanamthitta",
+    "Total_Wards": 788,
+    "NDA_Wards": 92
+  },
+  {
+    "Year": "2015",
+    "District": "Thiruvananthapuram",
+    "Total_Wards": 1298,
+    "NDA_Wards": 159
+  },
+  {
+    "Year": "2015",
+    "District": "Thrissur",
+    "Total_Wards": 1463,
+    "NDA_Wards": 102
+  },
+  {
+    "Year": "2020",
+    "District": "Alappuzha",
+    "Total_Wards": 1169,
+    "NDA_Wards": 148
+  },
+  {
+    "Year": "2020",
+    "District": "Ernakulam",
+    "Total_Wards": 1338,
+    "NDA_Wards": 44
+  },
+  {
+    "Year": "2020",
+    "District": "Idukki",
+    "Total_Wards": 790,
+    "NDA_Wards": 24
+  },
+  {
+    "Year": "2020",
+    "District": "Kannur",
+    "Total_Wards": 1165,
+    "NDA_Wards": 25
+  },
+  {
+    "Year": "2020",
+    "District": "Kasargode",
+    "Total_Wards": 664,
+    "NDA_Wards": 110
+  },
+  {
+    "Year": "2020",
+    "District": "Kollam",
+    "Total_Wards": 1233,
+    "NDA_Wards": 148
+  },
+  {
+    "Year": "2020",
+    "District": "Kottayam",
+    "Total_Wards": 1138,
+    "NDA_Wards": 89
+  },
+  {
+    "Year": "2020",
+    "District": "Kozhikode",
+    "Total_Wards": 1225,
+    "NDA_Wards": 18
+  },
+  {
+    "Year": "2020",
+    "District": "Malappuram",
+    "Total_Wards": 1778,
+    "NDA_Wards": 14
+  },
+  {
+    "Year": "2020",
+    "District": "Palakkad",
+    "Total_Wards": 1490,
+    "NDA_Wards": 113
+  },
+  {
+    "Year": "2020",
+    "District": "Pathanamthitta",
+    "Total_Wards": 786,
+    "NDA_Wards": 113
+  },
+  {
+    "Year": "2020",
+    "District": "Thiruvananthapuram",
+    "Total_Wards": 1299,
+    "NDA_Wards": 194
+  },
+  {
+    "Year": "2020",
+    "District": "Thrissur",
+    "Total_Wards": 1464,
+    "NDA_Wards": 134
+  },
+  {
+    "Year": "2020",
+    "District": "Wayanad",
+    "Total_Wards": 413,
+    "NDA_Wards": 13
+  }
+]
