@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActV_TheSurge() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
@@ -59,7 +60,7 @@ export default function ActV_TheSurge() {
                 <div className="border-l-4 border-bjp-saffron bg-gradient-to-r from-bjp-saffron/10 to-transparent p-8 rounded-r-2xl shadow-xl">
                   <div className="inline-block px-3 py-1 bg-bjp-saffron/20 rounded-full text-xs font-bold tracking-wider text-bjp-saffron mb-4">2019 Lok Sabha</div>
                   <h3 className="text-2xl font-heading text-white mb-4">Shifting Ground</h3>
-                  <p className="text-white/70 leading-relaxed text-lg mb-4">While the UDF swept the state, the NDA's underlying vote share jumped again. In Thiruvananthapuram, Kummanam Rajasekharan secured over 31% of the vote, and Pathanamthitta witnessed a massive surge, proving the NDA was a serious contender in triangular fights.</p>
+                  <p className="text-white/70 leading-relaxed text-lg mb-4">While the UDF swept the state, the NDA&apos;s underlying vote share jumped again. In Thiruvananthapuram, Kummanam Rajasekharan secured over 31% of the vote, and Pathanamthitta witnessed a massive surge, proving the NDA was a serious contender in triangular fights.</p>
                 </div>
               </div>
             </Step>

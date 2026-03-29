@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActVI_RootsDeepen() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
@@ -49,7 +50,7 @@ export default function ActVI_RootsDeepen() {
               <div className="step-card my-64 opacity-50 transition-opacity duration-300 data-[active=true]:opacity-100" data-active={currentStepIndex === 0}>
                 <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md shadow-xl">
                   <h3 className="text-2xl font-heading text-white mb-4">The Context</h3>
-                  <p className="text-white/70 leading-relaxed text-lg">The true test of a party's permanence in Keralam is its local machinery. In 2020, the BJP proved that it was no longer a party of just 'influential candidates' but possessed deep grassroots cadre strength.</p>
+                  <p className="text-white/70 leading-relaxed text-lg">The true test of a party&apos;s permanence in Keralam is its local machinery. In 2020, the BJP proved that it was no longer a party of just &apos;influential candidates&apos; but possessed deep grassroots cadre strength.</p>
                 </div>
               </div>
             </Step>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActVII_TheDip() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
@@ -39,7 +40,7 @@ export default function ActVII_TheDip() {
         <div className="w-full md:w-1/2 md:pl-16 pb-32">
           <div className="sticky top-24 mb-32 z-10 bg-dark-900/90 backdrop-blur-sm py-4 border-b border-bjp-saffron/30">
             <h2 className="text-bjp-saffron uppercase tracking-widest text-sm font-bold">Act</h2>
-            <h1 className="text-3xl md:text-5xl font-heading text-white mt-2">The Dip That Wasn't</h1>
+            <h1 className="text-3xl md:text-5xl font-heading text-white mt-2">The Dip That Wasn&apos;t</h1>
             <p className="text-white/50 text-sm mt-2">2021 Assembly Election</p>
           </div>
 

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActVIII_DoubleBreakthrough() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
