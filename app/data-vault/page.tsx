@@ -37,6 +37,7 @@ async function loadAllData(): Promise<ElectionRow[]> {
       // Skip rows where NDA didn't field a candidate (those are opposition winner context rows)
       if (!candidate.trim() && !voteShare) return;
       const year = r.Year ?? r.year;
+      const positionRaw = r.Position ?? r.position;
       rows.push({
         year: year ?? "—",
         type: "Lok Sabha",
@@ -44,7 +45,7 @@ async function loadAllData(): Promise<ElectionRow[]> {
         candidate: candidate || "—",
         party: toText(r["Party Label"] ?? r.party, "BJP"),
         voteShare: voteShare ? `${voteShare}%` : "—",
-        position: r.Position ?? r.position,
+        position: positionRaw == null ? undefined : positionRaw,
       });
     });
   } catch {}
@@ -54,6 +55,7 @@ async function loadAllData(): Promise<ElectionRow[]> {
     const assembly = (await fetch("/data/processed/assembly.json").then(r => r.json())) as RawRow[];
     assembly.forEach((r) => {
       const year = r.Year ?? r.year;
+      const positionRaw = r.Position ?? r.position;
       rows.push({
         year: year ?? "—",
         type: "Assembly",
@@ -61,7 +63,7 @@ async function loadAllData(): Promise<ElectionRow[]> {
         candidate: toText(r["BJP/NDA Candidate Name"] ?? r.candidate, "—"),
         party: toText(r["Party Label"] ?? r.party, "BJP"),
         voteShare: toText(r["Vote Share %"] ?? r.voteShare, "—"),
-        position: r.Position ?? r.position,
+        position: positionRaw == null ? undefined : positionRaw,
       });
     });
   } catch {}
