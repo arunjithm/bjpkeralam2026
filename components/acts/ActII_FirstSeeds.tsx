@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
 import ScoreboardCard from "@/components/charts/ScoreboardCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActII_FirstSeeds() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
@@ -100,7 +101,7 @@ export default function ActII_FirstSeeds() {
               <div className="step-card my-64 opacity-50 transition-opacity duration-300 data-[active=true]:opacity-100" data-active={currentStepIndex === 2}>
                 <div className="bg-bjp-saffron/10 border border-bjp-saffron/30 p-8 rounded-2xl backdrop-blur-md shadow-xl">
                   <MilestoneCard 
-                    quote="2010. Six wards in Thiruvananthapuram Corporation. Most of Keralam didn't notice."
+                    quote="2010. Six wards in Thiruvananthapuram Corporation. Most of Keralam didn&apos;t notice."
                   />
                 </div>
               </div>
@@ -112,7 +113,7 @@ export default function ActII_FirstSeeds() {
                   <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-bold tracking-wider text-white mb-4">2011 Assembly</div>
                   <h3 className="text-2xl font-heading text-white mb-4">The 6% Benchmark</h3>
                   <p className="text-white/70 leading-relaxed text-lg">
-                    In the 2011 Assembly election, the NDA polled about 6.06% of the state's total votes. While resulting in zero seats, the geographic spread revealed growing clusters of influence where BJP candidates crossed the 10% threshold.
+                    In the 2011 Assembly election, the NDA polled about 6.06% of the state&apos;s total votes. While resulting in zero seats, the geographic spread revealed growing clusters of influence where BJP candidates crossed the 10% threshold.
                   </p>
                 </div>
               </div>

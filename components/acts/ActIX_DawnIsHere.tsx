@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActIX_DawnIsHere() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
@@ -49,7 +50,7 @@ export default function ActIX_DawnIsHere() {
               <div className="step-card my-64 opacity-50 transition-opacity duration-300 data-[active=true]:opacity-100" data-active={currentStepIndex === 0}>
                 <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md shadow-xl">
                   <h3 className="text-2xl font-heading text-white mb-4">The Context</h3>
-                  <p className="text-white/70 leading-relaxed text-lg">The political monopoly of the last half-century has ended. As Keralam prepares for the 2026 Assembly elections, the NDA is no longer an 'also-ran' but a central pole of the electoral arithmetic.</p>
+                  <p className="text-white/70 leading-relaxed text-lg">The political monopoly of the last half-century has ended. As Keralam prepares for the 2026 Assembly elections, the NDA is no longer an &apos;also-ran&apos; but a central pole of the electoral arithmetic.</p>
                 </div>
               </div>
             </Step>

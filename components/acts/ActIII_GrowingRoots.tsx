@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
-import ScoreboardCard from "@/components/charts/ScoreboardCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActIII_GrowingRoots() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);

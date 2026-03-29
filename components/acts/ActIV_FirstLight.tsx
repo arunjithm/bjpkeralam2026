@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import MilestoneCard from "@/components/shared/MilestoneCard";
+import KeralaStateMap from "@/components/maps/KeralaStateMap";
 
 export default function ActIV_FirstLight() {
   const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
@@ -59,7 +60,7 @@ export default function ActIV_FirstLight() {
                 <div className="border-l-4 border-bjp-saffron bg-gradient-to-r from-bjp-saffron/10 to-transparent p-8 rounded-r-2xl shadow-xl">
                   <div className="inline-block px-3 py-1 bg-bjp-saffron/20 rounded-full text-xs font-bold tracking-wider text-bjp-saffron mb-4">2016 Heatmap</div>
                   <h3 className="text-2xl font-heading text-white mb-4">Shifting Ground</h3>
-                  <p className="text-white/70 leading-relaxed text-lg mb-4">The 'Gujarat of Keralam' was born. It wasn't just about one seat—the NDA vote share surged to a record 10.5% across the state, fundamentally breaking the bipolar nature of Keralam politics.</p>
+                  <p className="text-white/70 leading-relaxed text-lg mb-4">The &apos;Gujarat of Keralam&apos; was born. It wasn&apos;t just about one seat—the NDA vote share surged to a record 10.5% across the state, fundamentally breaking the bipolar nature of Keralam politics.</p>
                 </div>
               </div>
             </Step>
