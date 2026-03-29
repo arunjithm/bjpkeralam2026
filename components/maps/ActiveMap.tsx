@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { MapContainer, TileLayer, GeoJSON, CircleMarker, Tooltip, ZoomControl } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import type { Feature, GeoJsonObject, Geometry } from "geojson";
+import type { GeoJSON as LeafletGeoJSON, PathOptions } from "leaflet";
 
 interface ActiveMapProps {
   highlight?: string;
@@ -28,8 +30,8 @@ const KERALA_DISTRICT_CENTROIDS: Record<string, [number, number]> = {
 };
 
 export default function ActiveMap({ highlight, dots = [] }: ActiveMapProps) {
-  const [geoData, setGeoData] = useState<any>(null);
-  const geoJsonRef = useRef<any>(null);
+  const [geoData, setGeoData] = useState<GeoJsonObject | null>(null);
+  const geoJsonRef = useRef<LeafletGeoJSON | null>(null);
 
   useEffect(() => {
     fetch("/geojson/kerala_lsg_data.geojson")
@@ -40,7 +42,7 @@ export default function ActiveMap({ highlight, dots = [] }: ActiveMapProps) {
 
   const highlightedDistrict = highlight?.trim();
 
-  const getStyle = (feature: any) => {
+  const getStyle = useCallback((feature?: Feature<Geometry, { District?: string }>): PathOptions => {
     const dist = feature?.properties?.District?.trim() ?? "";
     const isHighlighted = highlightedDistrict && dist.toLowerCase() === highlightedDistrict.toLowerCase();
     return {
@@ -50,13 +52,13 @@ export default function ActiveMap({ highlight, dots = [] }: ActiveMapProps) {
       fillColor: isHighlighted ? "#FF9933" : "#1A1A1A",
       fillOpacity: isHighlighted ? 0.5 : 0.7,
     };
-  };
+  }, [highlightedDistrict]);
 
   useEffect(() => {
     if (geoJsonRef.current) {
       geoJsonRef.current.setStyle(getStyle);
     }
-  }, [highlight]);
+  }, [getStyle]);
 
   return (
     <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
@@ -81,7 +83,7 @@ export default function ActiveMap({ highlight, dots = [] }: ActiveMapProps) {
             ref={geoJsonRef}
             data={geoData}
             style={getStyle}
-            onEachFeature={(feature, layer) => {
+            onEachFeature={(feature: Feature<Geometry, { District?: string; name?: string; local_auth?: string }>, layer) => {
               const dist = feature?.properties?.District ?? "Unknown";
               const name = feature?.properties?.name ?? feature?.properties?.local_auth ?? "";
               layer.bindTooltip(

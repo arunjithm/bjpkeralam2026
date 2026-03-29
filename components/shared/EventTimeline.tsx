@@ -108,15 +108,6 @@ const EVENTS = [
   },
 ];
 
-const TAG_BG: Record<string, string> = {
-  "Pre-History": "rgba(255,255,255,0.08)",
-  "Local Body": "rgba(255,153,51,0.12)",
-  "Local Body — LATEST": "rgba(255,224,102,0.15)",
-  "Lok Sabha": "rgba(255,80,0,0.12)",
-  "Assembly": "rgba(60,100,255,0.12)",
-  "Upcoming": "rgba(19,136,8,0.12)",
-};
-
 export default function EventTimeline() {
   return (
     <section className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">

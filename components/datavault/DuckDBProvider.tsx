@@ -6,7 +6,7 @@ import * as duckdb from '@duckdb/duckdb-wasm';
 interface DuckDBContextType {
   db: duckdb.AsyncDuckDB | null;
   loading: boolean;
-  query: (sql: string) => Promise<any[]>;
+  query: (sql: string) => Promise<Record<string, unknown>[]>;
 }
 
 const DuckDBContext = createContext<DuckDBContextType>({
@@ -74,13 +74,13 @@ export function DuckDBProvider({ children }: { children: React.ReactNode }) {
     initDB();
   }, []);
 
-  const executeQuery = async (sql: string) => {
+  const executeQuery = async (sql: string): Promise<Record<string, unknown>[]> => {
     if (!db) return [];
     try {
       const conn = await db.connect();
       const result = await conn.query(sql);
       await conn.close();
-      const rows = result.toArray().map((r: any) => r.toJSON());
+      const rows = result.toArray().map((r: { toJSON: () => Record<string, unknown> }) => r.toJSON());
       return rows;
     } catch (e) {
       console.error("Query failed", e);

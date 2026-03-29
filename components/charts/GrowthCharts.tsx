@@ -23,7 +23,21 @@ const WARD_WINS_TVM = [
   { year: "2020", wards: 28 }, { year: "2025", wards: 50, milestone: true },
 ];
 
-function Tip({ active, payload, label }: any) {
+type TooltipPayloadItem = {
+  value?: number | string;
+  name?: string;
+  payload?: { milestone?: boolean };
+};
+
+function Tip({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: TooltipPayloadItem[];
+  label?: string | number;
+}) {
   if (!active || !payload?.length) return null;
   const p = payload[0];
   return (
@@ -42,8 +56,7 @@ function Tip({ active, payload, label }: any) {
   );
 }
 
-function AreaDot(props: any) {
-  const { cx, cy, payload } = props;
+function AreaDot({ cx, cy, payload }: { cx?: number; cy?: number; payload?: { milestone?: boolean } }) {
   if (!cx || !cy) return null;
   if (payload?.milestone) {
     return (

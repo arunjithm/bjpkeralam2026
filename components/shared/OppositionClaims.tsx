@@ -110,7 +110,7 @@ export default function OppositionClaims() {
             They Said It Would Never Happen.
           </h2>
           <p className="max-w-2xl mx-auto text-base" style={{ color: "rgba(255,200,120,0.5)" }}>
-            For decades, Keralam's biggest political names declared the BJP irrelevant—wrong, and wrong again.
+            For decades, Keralam&apos;s biggest political names declared the BJP irrelevant—wrong, and wrong again.
             Here is what they said, and what the voters replied.
           </p>
         </div>

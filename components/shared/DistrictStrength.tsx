@@ -58,8 +58,6 @@ export default function DistrictStrength() {
           {DISTRICTS.map((d) => {
             const isWon = d.trend === "won";
             const share2024Value = d.share2024 ?? 0;
-            const accent = isWon ? "rgba(255,220,80,0.2)" : share2024Value > 20
-              ? "rgba(255,153,51,0.12)" : "rgba(255,153,51,0.06)";
             const borderCol = isWon
               ? "rgba(255,220,80,0.4)"
               : share2024Value > 20
