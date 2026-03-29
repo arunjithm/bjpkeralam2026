@@ -17,15 +17,29 @@ interface ElectionRow {
   position?: string | number;
 }
 
+type RawRow = Record<string, string | number | null | undefined>;
+
 async function loadAllData(): Promise<ElectionRow[]> {
   const rows: ElectionRow[] = [];
 
   // --- Lok Sabha ---
   try {
-    const ls: any[] = await fetch("/data/processed/loksabha.json").then(r => r.json());
+    const ls = (await fetch("/data/processed/loksabha.json").then(r => r.json())) as RawRow[];
     ls.forEach((r) => {
-      const candidate = r["BJP/NDA Candidate Name"] ?? "";
-      const voteShare = r["Vote Share %"] ?? "";
+      const candidateRaw = r["BJP/NDA Candidate Name"];
+      const voteShareRaw = r["Vote Share %"];
+      const candidate =
+        typeof candidateRaw === "string"
+          ? candidateRaw
+          : candidateRaw == null
+            ? ""
+            : String(candidateRaw);
+      const voteShare =
+        typeof voteShareRaw === "string"
+          ? voteShareRaw
+          : voteShareRaw == null
+            ? ""
+            : String(voteShareRaw);
       // Skip rows where NDA didn't field a candidate (those are opposition winner context rows)
       if (!candidate.trim() && !voteShare) return;
       rows.push({
@@ -42,8 +56,8 @@ async function loadAllData(): Promise<ElectionRow[]> {
 
   // --- Assembly ---
   try {
-    const as: any[] = await fetch("/data/processed/assembly.json").then(r => r.json());
-    as.forEach((r) => {
+    const assembly = (await fetch("/data/processed/assembly.json").then(r => r.json())) as RawRow[];
+    assembly.forEach((r) => {
       rows.push({
         year: r.Year ?? r.year,
         type: "Assembly",
@@ -58,7 +72,7 @@ async function loadAllData(): Promise<ElectionRow[]> {
 
   // --- Corporations ---
   try {
-    const corp: any[] = await fetch("/data/processed/corporations_summary.json").then(r => r.json());
+    const corp = (await fetch("/data/processed/corporations_summary.json").then(r => r.json())) as RawRow[];
     corp.forEach((r) => {
       rows.push({
         year: r.Year ?? r.year,
