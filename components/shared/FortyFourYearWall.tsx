@@ -1,127 +1,124 @@
 "use client";
 
+import { History, Landmark, CheckCircle2, Flag, Zap, TrendingUp, Award, BarChart2 } from "lucide-react";
+
 const WALL = [
-  { year: "1957", tag: "Jana Sangh", note: "Contested — negligible vote share" },
-  { year: "1962", tag: "Jana Sangh", note: "Minimal presence" },
-  { year: "1967", tag: "Jana Sangh", note: "Minimal presence" },
-  { year: "1971", tag: "Jana Sangh", note: "Minimal presence" },
-  { year: "1977", tag: "Janata", note: "Jan Sangh merged into Janata Party" },
-  { year: "1980", tag: "BJP", note: "BJP founded · First Keralam LS contest — minimal share" },
-  { year: "1984", tag: "BJP", note: "Weakest national year · Keralam near-zero" },
-  { year: "1989", tag: "BJP", note: "Early stirrings nationally; Keralam still near-zero" },
-  { year: "1991", tag: "BJP", note: "First noticeable uptick; still single digits" },
-  { year: "1996", tag: "NDA", note: "Modest share · zero seats" },
-  { year: "1998", tag: "NDA", note: "Modest share · zero seats" },
-  { year: "1999", tag: "NDA", note: "Modest share · zero seats" },
-  { year: "2004", tag: "NDA", note: "Still zero seats" },
-  { year: "2009", tag: "NDA", note: "Decline · still zero" },
-  { year: "2014", tag: "NDA", note: "10.82% statewide · 0 seats", highlight: true },
-  { year: "2019", tag: "NDA", note: "15.64% statewide · 0 seats", highlight: true },
-  { year: "2024", tag: "NDA", note: "19.21% statewide · 1 seat (Thrissur)", highlight: true },
+  { year: "1980", tag: "BJP", note: "BJP founded. First Keralam LS contest.", icon: <Flag className="w-4 h-4" /> },
+  { year: "1984", tag: "BJP", note: "Zero seats. Minimal presence in the state.", icon: <Zap className="w-4 h-4" /> },
+  { year: "1991", tag: "BJP", note: "First noticeable uptick in urban pockets.", icon: <TrendingUp className="w-4 h-4" /> },
+  { year: "1999", tag: "NDA", note: "NDA share remains in single digits.", icon: <Award className="w-4 h-4" /> },
+  { year: "2014", tag: "NDA", note: "NDA crosses 10% for the first time.", highlight: true, icon: <CheckCircle2 className="w-4 h-4" /> },
+  { year: "2019", tag: "NDA", note: "Statewide share surges to 15.64%.", highlight: true, icon: <BarChart2 className="w-4 h-4" /> },
+  { year: "2024", tag: "NDA", note: "The breakthrough. First MP from Thrissur.", highlight: true, icon: <Landmark className="w-4 h-4" /> },
 ];
 
 const TAG_COLORS: Record<string, string> = {
-  "Jana Sangh": "rgba(255,255,255,0.35)",
-  Janata: "rgba(255,255,255,0.45)",
-  BJP: "#FF9933",
-  NDA: "#FFD166",
+  BJP: "bg-bjp-saffron/10 text-bjp-saffron",
+  NDA: "bg-bjp-saffron text-white",
 };
 
 export default function FortyFourYearWall() {
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[300px]"
-          style={{ background: "radial-gradient(ellipse, rgba(255,80,0,0.08) 0%, transparent 70%)" }}
-        />
-      </div>
-
-      <div className="relative max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <div
-            className="inline-flex items-center gap-2 border rounded-full px-4 py-1.5 mb-5"
-            style={{ borderColor: "rgba(255,153,51,0.35)", background: "rgba(255,153,51,0.08)" }}
-          >
-            <span className="text-bjp-saffron text-xs font-black uppercase tracking-[0.2em]">The Wall</span>
+    <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+      <div className="relative max-w-5xl mx-auto">
+        <div className="text-left mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 text-white text-[10px] font-black uppercase tracking-[0.2em]">
+            <History className="w-3 h-3 text-bjp-saffron" />
+            The Long Arc
           </div>
-          <h2
-            className="font-heading font-black text-3xl md:text-5xl mb-4"
-            style={{ color: "rgba(255,230,180,0.95)" }}
-          >
-            The Forty-Four Year Wall
+          <h2 className="statement-header text-3xl md:text-5xl lg:text-6xl leading-tight">
+            Cracking the <span className="saffron-header">Wall.</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-base" style={{ color: "rgba(255,200,120,0.55)" }}>
-            From 1980 to 2024, Keralam sent zero BJP MPs to Parliament. This is the long arc that 2024 finally cracked.
+          <p className="max-w-2xl text-xl text-ink-700 font-medium leading-relaxed">
+            The forty-four year journey from a political footnote to a decisive third pole.
           </p>
         </div>
 
-        <div className="rounded-2xl p-6 bg-saffron-glass border border-bjp-saffron/20">
-          <div className="overflow-x-auto pb-2">
-            <div className="flex gap-4 min-w-max">
-              {WALL.map((w) => (
-                <div
-                  key={w.year}
-                  className="rounded-2xl p-4 min-w-[220px] bg-black/40 border"
-                  style={{
-                    borderColor: w.highlight ? "rgba(255,200,80,0.6)" : "rgba(255,153,51,0.15)",
-                    boxShadow: w.highlight ? "0 0 24px rgba(255,153,51,0.2)" : "none",
-                  }}
-                >
-                  <div className={`font-mono font-black text-2xl ${w.highlight ? "text-gold" : "text-white/70"}`}>
+        {/* Vertical Stack Timeline */}
+        <div className="relative space-y-6">
+          {/* Vertical line connector */}
+          <div className="absolute left-10 top-0 bottom-0 w-0.5 bg-neutral-100 z-0" />
+          
+          {WALL.map((w, i) => (
+            <div
+              key={w.year}
+              className={`relative flex items-center transition-all duration-500 group ${
+                w.highlight ? "z-10" : "opacity-90"
+              }`}
+            >
+              {/* Milestone Icon Circle */}
+              <div className="relative z-10 shrink-0">
+                <div className={`w-20 h-20 rounded-3xl flex flex-col items-center justify-center transition-all duration-500 shadow-xl border-4 border-white ${
+                  w.highlight 
+                  ? "bg-bjp-saffron text-white scale-110" 
+                  : "bg-white text-neutral-400 border-neutral-100 group-hover:border-bjp-saffron/30"
+                }`}>
+                  <div className="mb-0.5">{w.icon}</div>
+                  <span className="font-mono font-black text-[10px] tracking-tighter">{w.year}</span>
+                </div>
+              </div>
+
+              {/* Flattened Horizontal Card - Minimal Height */}
+              <div className={`ml-8 glass-card flex-1 p-4 md:p-6 border-neutral-200 transition-all duration-500 flex flex-row items-center gap-6 ${
+                w.highlight 
+                ? "border-bjp-saffron/40 shadow-2xl bg-white ring-1 ring-bjp-saffron/10 scale-[1.02]" 
+                : "bg-neutral-50/50 group-hover:bg-white"
+              }`}>
+                {/* Fixed-width year & tag column */}
+                <div className="flex flex-col gap-1 shrink-0 w-20 md:w-24">
+                  <span className={`text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded-md w-max ${TAG_COLORS[w.tag]}`}>
+                    {w.tag}
+                  </span>
+                  <span className="font-mono font-black text-2xl text-neutral-900 group-hover:text-bjp-saffron transition-colors leading-none">
                     {w.year}
-                  </div>
-                  <div className="mt-2 flex items-center gap-2">
-                    <span
-                      className="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full"
-                      style={{
-                        color: TAG_COLORS[w.tag] ?? "rgba(255,255,255,0.5)",
-                        border: `1px solid ${TAG_COLORS[w.tag] ?? "rgba(255,255,255,0.2)"}`,
-                        background: "rgba(0,0,0,0.35)",
-                      }}
-                    >
-                      {w.tag}
-                    </span>
-                    {w.highlight && (
-                      <span className="text-[10px] uppercase tracking-widest text-bjp-saffron">Verified</span>
-                    )}
-                  </div>
-                  <p className="text-xs mt-3" style={{ color: "rgba(255,210,150,0.75)" }}>
+                  </span>
+                </div>
+                
+                {/* Note - Flexible text */}
+                <div className="flex-1 border-l border-neutral-200 pl-6">
+                  <p className="text-neutral-800 font-bold leading-tight text-sm md:text-lg">
                     {w.note}
                   </p>
                 </div>
-              ))}
+                
+                {/* Status Indicator */}
+                {w.highlight && (
+                  <div className="hidden sm:flex shrink-0 items-center gap-2 text-emerald-600 font-black text-[10px] uppercase tracking-widest">
+                    <CheckCircle2 className="w-4 h-4" />
+                    Historic
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-          <p className="mt-4 text-xs" style={{ color: "rgba(255,200,120,0.35)" }}>
-            Percentages shown only where Election Commission figures are confirmed (2014, 2019, 2024).
-          </p>
+          ))}
         </div>
 
-        <div className="mt-8 rounded-2xl p-6 bg-saffron-glass border border-bjp-saffron/30 shadow-xl">
-          <div className="text-xs font-black uppercase tracking-[0.3em] text-bjp-saffron mb-4">The Insight</div>
-          <h3 className="font-heading font-bold text-xl text-white mb-3">The Wall Was Mathematical</h3>
-          <p className="text-sm leading-relaxed" style={{ color: "rgba(255,200,120,0.65)" }}>
-            In 2014, the NDA crossed 10% for the first time with a confirmed 10.82% share. They received votes
-            across all 20 constituencies — and still won zero seats. The wall wasn&apos;t just political. It was
-            geometric. Keralam&apos;s first‑past‑the‑post arithmetic made a three‑way breakthrough brutal. What changed
-            in 2024 wasn&apos;t just support. It was the depth of that support.
-          </p>
-          <div className="mt-5 grid grid-cols-3 gap-3">
+        {/* Insight Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-24">
+          <div className="lg:col-span-7 space-y-6">
+            <h3 className="text-3xl md:text-4xl font-heading font-black text-neutral-900 tracking-tight leading-tight">
+              The Wall Was Not Just Political — <br />
+              <span className="text-bjp-saffron">It Was Mathematical.</span>
+            </h3>
+            <p className="text-lg text-neutral-600 leading-relaxed font-sans font-medium">
+              In 2014, the NDA crossed 10% for the first time. In a multi-polar electorate, 10% is noise. 
+              But <span className="font-black text-neutral-900 underline decoration-bjp-saffron decoration-4 underline-offset-8">19.21% is a breakthrough</span>. 
+              2024 proved the depth of support is now irreversible.
+            </p>
+          </div>
+          
+          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
             {[
-              { v: "10.82%", l: "2014 NDA" },
-              { v: "15.64%", l: "2019 NDA" },
-              { v: "19.21%", l: "2024 NDA" },
+              { v: "10.82%", l: "2014 NDA Share", h: "h-6" },
+              { v: "15.64%", l: "2019 NDA Share", h: "h-10" },
+              { v: "19.21%", l: "2024 NDA Share", h: "h-14", active: true },
             ].map((s) => (
-              <div
-                key={s.l}
-                className="rounded-xl px-3 py-2 text-center"
-                style={{ background: "rgba(0,0,0,0.4)", border: "1px solid rgba(255,153,51,0.2)" }}
-              >
-                <div className="font-mono font-black text-lg leading-none text-gold">{s.v}</div>
-                <div className="text-[10px] mt-1 uppercase tracking-wider" style={{ color: "rgba(255,200,120,0.45)" }}>
-                  {s.l}
+              <div key={s.l} className={`glass-card p-6 flex items-center justify-between group hover:border-bjp-saffron transition-all ${s.active ? 'border-bjp-saffron shadow-lg' : 'border-neutral-100'}`}>
+                <div>
+                  <div className={`font-mono font-black text-3xl ${s.active ? "text-bjp-saffron" : "text-neutral-900"}`}>{s.v}</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-neutral-400 mt-1">{s.l}</div>
                 </div>
+                <div className={`w-3 rounded-full ${s.active ? "bg-bjp-saffron animate-pulse" : "bg-neutral-100"} ${s.h}`} />
               </div>
             ))}
           </div>

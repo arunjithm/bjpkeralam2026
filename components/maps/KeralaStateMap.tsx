@@ -8,9 +8,9 @@ const LeafletMap = dynamic(
   { 
     ssr: false, 
     loading: () => (
-      <div className="w-full h-full flex flex-col items-center justify-center bg-dark-800 rounded-2xl border border-white/10">
+      <div className="w-full h-full flex flex-col items-center justify-center bg-white rounded-2xl border border-bjp-saffron/20 shadow-xl">
         <Loader2 className="h-8 w-8 text-bjp-saffron animate-spin mb-4" />
-        <span className="text-white/50 text-sm">Loading Interactive Map...</span>
+        <span className="text-neutral-400 font-bold text-sm tracking-widest uppercase">Loading Interactive Map...</span>
       </div>
     )
   }

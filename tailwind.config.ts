@@ -9,34 +9,44 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Warm dark base matching BJP dawn aesthetic
-        dark: {
-          950: "#0E0400",
-          900: "#1A0800",
-          800: "#2A1000",
-          700: "#3A1800",
-          600: "#4A2000",
-        },
         bjp: {
           saffron:     "#FF9933",
           saffrondark: "#E68A2E",
+          saffronsoft: "#FFF5EB", // Very light saffron for cards/bg
           gold:        "#FFD166",
-          amber:       "#FF6B00",
           green:       "#138808",
+          greensoft:   "#F0FDF4", // Very light green for success/positive cards
           greendark:   "#0D6206",
         },
+        // Rich tinted neutrals to replace cold grays
+        ink: {
+          950: "#1F140B", // Deepest saffron-black
+          900: "#2B1B11",
+          800: "#3B2A1D",
+          700: "#4B3728",
+          600: "#5D4635",
+          500: "#705849",
+          400: "#8A6E5E",
+          300: "#A6897B",
+          200: "#CBB7A8",
+          100: "#E7D9CF",
+        },
+        forest: {
+          950: "#051A03", // Deepest green-black
+          900: "#0A2906",
+          800: "#113D0B",
+          700: "#1A5212",
+          600: "#24691A",
+        }
       },
       fontFamily: {
-        heading: ["var(--font-playfair)", "Georgia", "serif"],
+        heading: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+        quote:   ["var(--font-playfair)", "Georgia", "serif"],
         mono:    ["var(--font-jetbrains)", "Courier New", "monospace"],
-        sans:    ["var(--font-inter)", "system-ui", "sans-serif"],
-      },
-      backgroundImage: {
-        "saffron-radial": "radial-gradient(ellipse at center, rgba(255,153,51,0.15) 0%, transparent 70%)",
+        sans:    ["var(--font-source)", "system-ui", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
-
 export default config;

@@ -1,35 +1,40 @@
 "use client";
 
+import { ShieldCheck, Database, FileCheck } from "lucide-react";
+
 const SOURCES = [
-  { label: "Election Commission of India", sub: "Lok Sabha + Assembly results" },
-  { label: "Keralam State Election Commission", sub: "Local body data" },
-  { label: "Verified national reporting", sub: "Result-day coverage" },
+  { label: "Election Commission", sub: "LS + Assembly results", icon: <ShieldCheck className="w-6 h-6" /> },
+  { label: "State Election Comm.", sub: "Local body data", icon: <Database className="w-6 h-6" /> },
+  { label: "Verified Reporting", sub: "National coverage", icon: <FileCheck className="w-6 h-6" /> },
 ];
 
 export default function CredibilityBanner() {
   return (
-    <section className="relative py-10 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="relative max-w-6xl mx-auto">
-        <div className="rounded-2xl p-6 bg-saffron-glass border border-bjp-saffron/25 shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.35em] text-bjp-saffron font-black mb-2">
-                Credibility Banner
+    <section id="credibility-banner" className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-bjp-saffronsoft/30 overflow-hidden border-y border-bjp-saffron/10">
+      <div className="relative max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="max-w-2xl text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-6 border border-emerald-500/20">
+              <ShieldCheck className="w-3 h-3" />
+              Data Integrity Verified
+            </div>
+            <h3 className="text-3xl md:text-4xl font-heading font-black text-ink-950 mb-6 tracking-tight leading-tight">
+              Every percentage point is <br /><span className="text-bjp-saffron">source‑checked.</span>
+            </h3>
+            <p className="text-ink-700 text-lg leading-relaxed font-sans font-medium">
+              This project is built from audited public election data and independently verified reporting. 
+              Transparency is our baseline.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto">
+            {SOURCES.map((s) => (
+              <div key={s.label} className="glass-card p-4 text-left transition-all shadow-sm group">
+                <div className="text-bjp-saffron mb-3 group-hover:scale-110 transition-transform">{s.icon}</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-ink-950 mb-0.5">{s.label}</div>
+                <div className="text-[9px] text-ink-400 font-bold leading-none">{s.sub}</div>
               </div>
-              <h3 className="font-heading font-bold text-xl text-white mb-2">Every number is source‑checked</h3>
-              <p className="text-sm" style={{ color: "rgba(255,200,120,0.65)" }}>
-                This project is built from public election data and independently verified reporting. Where figures
-                are unverified, they are withheld or marked as pending.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full md:w-auto">
-              {SOURCES.map((s) => (
-                <div key={s.label} className="rounded-xl p-4 text-center bg-black/40 border border-white/10">
-                  <div className="text-xs font-black uppercase tracking-widest text-white/70">{s.label}</div>
-                  <div className="text-[10px] mt-2 text-white/40">{s.sub}</div>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </div>

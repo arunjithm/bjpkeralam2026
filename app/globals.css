@@ -3,69 +3,177 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 240, 220, 180;
   --bjp-saffron: #FF9933;
-  --bjp-gold: #FFD166;
+  --bjp-saffrondark: #E68A2E;
   --bjp-green: #138808;
+  --ink-950: #1F140B;
+  --ink-900: #2B1B11;
+  --ink-800: #3B2A1D;
+  --ink-700: #4B3728;
+  --ink-600: #5D4635;
+  --ink-500: #705849;
+  --ink-400: #8A6E5E;
 }
 
-/* ─── Body: Warm amber-on-black BJP palette ─────────────────────────── */
 body {
-  color: rgb(var(--foreground-rgb));
-  /* Radiant Saffron Sunrise - Clean & Professional */
-  background: #000000;
-  background-image: 
-    radial-gradient(circle at 50% -20%, #FF9933 0%, transparent 70%),
-    radial-gradient(circle at 0% 0%, rgba(255, 153, 51, 0.15) 0%, transparent 40%);
+  color: var(--ink-900);
+  background: #ffffff;
+  background-image:
+    radial-gradient(circle at 5% 5%, rgba(255, 153, 51, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, rgba(19, 136, 8, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #FFF9F5 0%, #FFFFFF 20%);
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-.bg-saffron-glass {
-  background: rgba(45, 15, 0, 0.75);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 153, 51, 0.45);
-  box-shadow: 0 0 40px rgba(255, 153, 51, 0.25), inset 0 0 20px rgba(255, 153, 51, 0.1);
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-black tracking-tight text-ink-950;
+  }
 }
 
-.text-gold {
-  color: #FFD166;
-  text-shadow: 0 0 25px rgba(255, 209, 102, 0.5), 0 0 50px rgba(255, 153, 51, 0.3);
-  font-weight: 900;
+/* ─── Animated Border: Desktop only (saves GPU on mobile) ─────────── */
+@media (min-width: 768px) {
+  .animated-border-saffron-green {
+    position: relative;
+    border: 4px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, var(--bjp-saffron) 0%, var(--bjp-green) 100%) border-box;
+    background-size: 200% 200%;
+    animation: border-gradient 4s ease infinite;
+    will-change: background-position;
+    border-radius: 1.25rem;
+  }
+
+  .animated-border-dark {
+    position: relative;
+    border: 4px solid transparent;
+    background: linear-gradient(var(--ink-950), var(--ink-950)) padding-box,
+                linear-gradient(135deg, var(--bjp-saffron) 0%, var(--bjp-green) 100%) border-box;
+    background-size: 200% 200%;
+    animation: border-gradient 4s ease infinite;
+    will-change: background-position;
+    border-radius: 1.25rem;
+  }
 }
 
-/* ─── Leaflet tooltip override ──────────────────────────────────────── */
-.leaflet-custom-tooltip {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Mobile: static border (no GPU animation) */
+@media (max-width: 767px) {
+  .animated-border-saffron-green {
+    border: 2px solid rgba(255, 153, 51, 0.3);
+    border-radius: 1.25rem;
+    background: white;
+  }
+
+  .animated-border-dark {
+    border: 2px solid rgba(255, 153, 51, 0.3);
+    border-radius: 1.25rem;
+    background: var(--ink-950);
+  }
 }
 
-/* ─── Recharts font override ────────────────────────────────────────── */
-.recharts-cartesian-axis-tick text {
-  font-family: var(--font-jetbrains), monospace;
+@keyframes border-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* ─── Scrollytelling step fades ─────────────────────────────────────── */
-.step-card[data-active="true"] { opacity: 1 !important; }
-
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in {
-  animation: fade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+/* ─── Glass Card ──────────────────────────────────────────────────── */
+.glass-card {
+  @apply animated-border-saffron-green shadow-sm transition-all duration-300;
 }
 
-/* ─── Hide horizontal scrollbars ───────────────────────────────────── */
-.overflow-x-auto { scrollbar-width: none; -ms-overflow-style: none; }
-.overflow-x-auto::-webkit-scrollbar { display: none; }
-
-/* ─── Saffron text-glow utility ─────────────────────────────────────── */
-.glow-saffron {
-  text-shadow: 0 0 30px rgba(255,153,51,0.6), 0 0 60px rgba(255,153,51,0.3);
+/* Only scale on hover for pointer devices */
+@media (hover: hover) {
+  .glass-card:hover {
+    @apply shadow-xl -translate-y-1;
+  }
 }
 
-/* ─── Saffron box glow ───────────────────────────────────────────────── */
-.shadow-saffron {
-  box-shadow: 0 0 0 1px rgba(255,153,51,0.2), 0 8px 32px rgba(255,153,51,0.15);
+/* ─── Statement Header (fluid responsive) ─────────────────────────── */
+.statement-header {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  @apply font-heading font-black tracking-tighter text-ink-950;
+  line-height: 1.05;
+}
+
+.saffron-header {
+  @apply text-bjp-saffron;
+}
+
+/* ─── Button ──────────────────────────────────────────────────────── */
+.btn-saffron {
+  @apply bg-bjp-saffron hover:bg-bjp-saffrondark text-white font-black rounded-xl shadow-lg shadow-bjp-saffron/20 transition-all flex items-center justify-center;
+}
+
+@media (hover: hover) {
+  .btn-saffron:hover {
+    transform: scale(1.02);
+  }
+}
+
+.btn-saffron:active {
+  transform: scale(0.97);
+}
+
+/* ─── Color Utilities ─────────────────────────────────────────────── */
+.text-ink-950 { color: var(--ink-950) !important; }
+.text-ink-900 { color: var(--ink-900) !important; }
+.text-ink-800 { color: var(--ink-800) !important; }
+.text-ink-700 { color: var(--ink-700) !important; }
+.text-ink-600 { color: var(--ink-600) !important; }
+.text-ink-500 { color: var(--ink-500) !important; }
+.text-ink-400 { color: var(--ink-400) !important; }
+.text-white { color: #ffffff !important; }
+.text-pure-white { color: #ffffff !important; }
+
+/* ─── Scrollbar ───────────────────────────────────────────────────── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─── Chart axis labels ───────────────────────────────────────────── */
+.recharts-cartesian-axis-tick-value {
+  @apply font-mono font-bold text-[10px];
+  fill: var(--ink-500) !important;
+}
+
+/* ─── Section entrance fade-in ────────────────────────────────────── */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Touch-safe minimum tap targets ─────────────────────────────── */
+@media (max-width: 767px) {
+  button, a[href], [role="button"] {
+    min-height: 44px;
+  }
+}
+
+/* ─── Prevent counter card reflow during animation ───────────────── */
+.counter-card-min {
+  min-height: 110px;
+}
+
+/* ─── Map overlay for mobile scroll prevention ────────────────────── */
+.map-tap-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(31, 20, 11, 0.12);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  border-radius: inherit;
+  transition: opacity 0.3s;
+}
+.map-tap-overlay.activated {
+  opacity: 0;
+  pointer-events: none;
 }

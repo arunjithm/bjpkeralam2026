@@ -19,14 +19,11 @@ const CALC_DATA = {
     { name: "Attingal", group: "Attingal LS", status: "led" },
     { name: "Kattakkada", group: "Attingal LS", status: "led" },
   ],
-  total_seats: 140
 };
 
 export default function ElectionSandbox() {
   const [swing, setSwing] = useState(0);
 
-  // Simple heuristic: For every 1% swing, 3-5 marginal seats become "winnable"
-  // At 5% swing (20%+ total vote share), the leads expand significantly
   const calculateSeats = (val: number) => {
     const base = CALC_DATA.baseline;
     if (val < 1) return base;
@@ -39,134 +36,108 @@ export default function ElectionSandbox() {
   const projectedSeats = calculateSeats(swing);
 
   return (
-    <section className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#0d0400]">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-bjp-saffron/5 rounded-full blur-[120px] -mr-64 -mt-64" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#138808]/5 rounded-full blur-[120px] -ml-64 -mb-64" />
-
-      <div className="relative max-w-5xl mx-auto">
+    <section className="relative py-28 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+      <div className="relative max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="text-center mb-16 px-4">
-           <div className="inline-flex items-center gap-2 mb-6">
-              <span className="h-px w-8 bg-bjp-saffron/40" />
-              <span className="text-bjp-saffron font-black text-xs uppercase tracking-[0.3em]">Projection Engine</span>
-              <span className="h-px w-8 bg-bjp-saffron/40" />
-           </div>
-           <h2 className="font-heading font-black text-4xl md:text-6xl text-white mb-6">
-             2026 Assembly Sandbox
-           </h2>
-           <p className="max-w-xl mx-auto text-base" style={{ color: "rgba(255,200,120,0.5)" }}>
-             In 2024, the NDA led in 11 assembly segments (6 under Thrissur LS, 3 under Thiruvananthapuram LS, and 2 under
-             Attingal LS). What happens if the momentum increases by just a few percentage points? Use the slider to
-             simulate the future.
-           </p>
+        <div className="text-left mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ink-950/5 border border-ink-950/10 text-ink-950 text-xs font-black uppercase tracking-[0.2em]">
+            <TrendingUp className="w-3.5 h-3.5 text-bjp-saffron" />
+            Projection Engine
+          </div>
+          <h2 className="statement-header">
+            2026 Assembly <br />
+            <span className="saffron-header">Sandbox.</span>
+          </h2>
+          <p className="max-w-2xl text-xl text-ink-700 font-sans font-medium">
+            What happens if the 2024 momentum increases by just a few points? 
+            Simulate the future using our historical conversion model.
+          </p>
         </div>
 
         {/* The Sandbox Card */}
-        <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-white/[0.02] to-transparent backdrop-blur-3xl shadow-2xl">
-          <div className="p-8 md:p-12">
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="glass-card border-bjp-saffron/10 shadow-2xl overflow-hidden">
+          <div className="p-6 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
-              {/* Controls */}
-              <div className="space-y-12">
-                <div>
-                   <div className="flex justify-between items-end mb-6">
-                      <label className="text-white font-bold text-lg">Simulated NDA Swing</label>
-                      <span className="font-mono font-black text-4xl text-bjp-saffron">+{swing}%</span>
-                   </div>
-                   <input 
-                     type="range" 
-                     min="0" 
-                     max="10" 
-                     step="0.5"
-                     value={swing}
-                     onChange={(e) => setSwing(parseFloat(e.target.value))}
-                     className="w-full h-3 bg-white/5 rounded-lg appearance-none cursor-pointer accent-bjp-saffron"
-                   />
-                   <div className="flex justify-between mt-3 font-mono text-[10px] text-white/20 uppercase tracking-widest">
-                      <span>2024 Baseline</span>
-                      <span>10% Wave</span>
-                   </div>
-                </div>
-
-              <div className="grid grid-cols-1 gap-4">
-                  <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
-                      <div className="h-10 w-10 shrink-0 rounded-lg bg-bjp-saffron/20 flex items-center justify-center text-bjp-saffron">
-                        <TrendingUp size={20} />
-                      </div>
-                      <div>
-                        <div className="text-white font-bold text-sm">Momentum Multiplier</div>
-                        <p className="text-xs text-white/40 leading-relaxed mt-1">Based on historical conversion rates where a 1% swing in 3-way races flips segments at 3.4x rate.</p>
-                      </div>
-                   </div>
-                   <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
-                      <div className="h-10 w-10 shrink-0 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-500">
-                        <Search size={20} />
-                      </div>
-                      <div>
-                        <div className="text-white font-bold text-sm">Concentration Effect</div>
-                        <p className="text-xs text-white/40 leading-relaxed mt-1">Estimating growth in high-strength pockets like TVM, Palakkad, and Kasaragod.</p>
-                  </div>
-                  <div className="p-4 rounded-xl bg-white/5 border border-white/5">
-                    <div className="text-white font-bold text-sm mb-3">2024 NDA-Led Assembly Segments</div>
-                    <div className="flex flex-wrap gap-2">
-                      {CALC_DATA.segments.map((seg) => {
-                        const status = seg.status;
-                        const style =
-                          status === "led"
-                            ? { border: "1px solid rgba(255,153,51,0.35)", color: "rgba(255,200,120,0.75)", background: "rgba(255,153,51,0.08)" }
-                            : status === "udf"
-                              ? { border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.45)" }
-                              : { border: "1px dashed rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.4)" };
-                        const suffix = status === "udf" ? " · UDF" : status === "pending" ? " · verify" : "";
-                        return (
-                          <span key={`${seg.group}-${seg.name}`} className="px-3 py-1.5 rounded-full text-[10px] uppercase tracking-widest" style={style}>
-                            {seg.name}{suffix}
-                          </span>
-                        );
-                      })}
-                    </div>
-                    <p className="text-[10px] text-white/35 mt-3">
-                      Guruvayur stayed with the UDF; the rest mark the 11 NDA-led assembly segments of 2024.
-                    </p>
-                  </div>
-               </div>
-              </div>
-              </div>
-
-              {/* Big Projection Display */}
-              <div className="relative aspect-square md:aspect-auto md:h-[350px] flex flex-col items-center justify-center text-center">
-                 {/* Decorative Circles */}
-                 <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                    <div className="w-64 h-64 rounded-full border border-bjp-saffron/40 animate-[ping_4s_infinite]" />
-                    <div className="absolute w-48 h-48 rounded-full border border-bjp-saffron/60" />
-                 </div>
-
-                 <div className="relative">
-                    <div className="text-[120px] md:text-[160px] font-mono font-black leading-none text-white tracking-tighter"
-                         style={{ textShadow: "0 0 50px rgba(255,153,51,0.3)" }}>
+              {/* Projection Result & Slider Area (5 cols - Moved up for mobile) */}
+              <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-8">
+                <div className="animated-border-dark shadow-2xl relative overflow-hidden group p-8 text-center">
+                  <div className="absolute inset-0 bg-bjp-saffron/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-bjp-saffron/20 rounded-full blur-[80px] scale-150 animate-pulse" />
+                    <div className="relative font-mono font-black text-[120px] md:text-[150px] text-white leading-none tracking-tighter">
                       {projectedSeats}
                     </div>
-                    <div className="text-bjp-saffron font-black text-sm uppercase tracking-[0.4em] mt-2">
-                       Projected Assembly Seats
+                  </div>
+                  <div className="text-bjp-saffron font-black text-xs uppercase tracking-[0.5em] mt-6">
+                    Projected Seats
+                  </div>
+                  
+                  {/* Slider integrated here for mobile accessibility */}
+                  <div className="mt-8 bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl">
+                    <div className="flex justify-between items-end mb-4">
+                        <label className="text-ink-400 font-black text-[10px] uppercase tracking-widest">Simulated Swing</label>
+                        <span className="font-mono font-black text-2xl text-bjp-saffron">+{swing}%</span>
                     </div>
-                    <div className="mt-8 px-6 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] text-white/40 uppercase tracking-widest inline-flex items-center gap-2">
-                       <Info size={12} />
-                       Statistical model based on 140 Assembly Constituencies
+                    <input 
+                      type="range" min="0" max="10" step="0.5" value={swing}
+                      onChange={(e) => setSwing(parseFloat(e.target.value))}
+                      className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-bjp-saffron"
+                    />
+                    <div className="flex justify-between mt-3 font-mono text-[8px] font-black text-ink-500 uppercase tracking-widest">
+                        <span>Baseline</span>
+                        <span>10% Wave</span>
                     </div>
-                 </div>
+                  </div>
+                </div>
+
+                <div className="glass-card p-6 text-center">
+                  <p className="text-sm font-quote italic text-ink-900 leading-relaxed">
+                    &ldquo;When the gap is this thin, even a 0.5% shift writes a new history.&rdquo;
+                  </p>
+                </div>
+              </div>
+
+              {/* Technical Context (7 cols) */}
+              <div className="lg:col-span-7 order-2 lg:order-1 space-y-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="glass-card p-6 flex gap-4">
+                    <TrendingUp className="w-6 h-6 text-bjp-saffron shrink-0" />
+                    <div>
+                      <div className="text-ink-950 font-black text-sm uppercase tracking-tight">Momentum Multiplier</div>
+                      <p className="text-xs text-ink-500 font-sans font-medium mt-1 leading-relaxed">Based on historical conversion where a 1% swing in 3-way races flips segments at 3.4x rate.</p>
+                    </div>
+                  </div>
+                  <div className="glass-card p-6 flex gap-4">
+                    <Search className="w-6 h-6 text-ink-950 shrink-0" />
+                    <div>
+                      <div className="text-ink-950 font-black text-sm uppercase tracking-tight">Concentration Effect</div>
+                      <p className="text-xs text-ink-500 font-sans font-medium mt-1 leading-relaxed">Estimating growth in high-strength clusters like TVM, Palakkad, and Kasaragod.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-8">
+                  <div className="text-[10px] font-black uppercase tracking-widest text-ink-400 mb-6 flex items-center gap-2">
+                    <Info className="w-4 h-4 text-bjp-saffron" />
+                    2024 Baseline: NDA-Led Assembly Segments
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {CALC_DATA.segments.map((seg) => (
+                      <span key={seg.name} className={`px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest border transition-colors shadow-sm ${
+                        seg.status === 'led' 
+                        ? 'bg-bjp-saffron text-white border-bjp-saffron' 
+                        : 'bg-bjp-saffronsoft/30 border-bjp-saffron/10 text-ink-400'
+                      }`}>
+                        {seg.name} {seg.status === 'udf' ? '(UDF)' : ''}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
             </div>
-
-          </div>
-
-          <div className="bg-bjp-saffron/5 border-t border-white/5 p-6 text-center">
-             <p className="text-sm font-medium italic" style={{ color: "rgba(255,200,120,0.4)" }}>
-               &ldquo;When the gap is this thin, even a 0.5% shift writes a new history.&rdquo;
-             </p>
           </div>
         </div>
 

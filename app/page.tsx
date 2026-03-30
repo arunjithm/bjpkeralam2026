@@ -1,4 +1,5 @@
 import ActIBeforeDawn from "@/components/acts/ActI_BeforeDawn";
+import Manifesto from "@/components/shared/Manifesto";
 import CredibilityBanner from "@/components/shared/CredibilityBanner";
 import FortyFourYearWall from "@/components/shared/FortyFourYearWall";
 import NearMissGallery from "@/components/shared/NearMissGallery";
@@ -12,59 +13,85 @@ import DistrictStrength from "@/components/shared/DistrictStrength";
 import ElectionSandbox from "@/components/shared/ElectionSandbox";
 import OppositionClaims from "@/components/shared/OppositionClaims";
 import EventTimeline from "@/components/shared/EventTimeline";
+import SiteFooter from "@/components/shared/SiteFooter";
+import FirstMayorBanner from "@/components/shared/FirstMayorBanner";
+import SabarimaIaEffect from "@/components/shared/SabarimalaEffect";
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-white font-sans overflow-x-hidden">
+    <main className="min-h-screen bg-white text-neutral-900 font-sans overflow-x-hidden selection:bg-bjp-saffron/30">
 
       {/* 1 — Hero: dramatic hook, counters, journey strip */}
       <ActIBeforeDawn />
 
       {/* 2 — Credibility banner */}
-      <CredibilityBanner />
+      <div id="credibility-banner">
+        <CredibilityBanner />
+      </div>
 
       {/* 3 — The 44-year wall */}
-      <FortyFourYearWall />
+      <div id="forty-four-wall">
+        <FortyFourYearWall />
+      </div>
 
       {/* 4 — Near-Miss Gallery: razor-thin contests */}
-      <NearMissGallery />
+      <div id="near-miss-gallery">
+        <NearMissGallery />
+      </div>
 
-      {/* 5 — Thrissur Deep Dive: "Digital Scrollytelling" of the first MP win */}
-      <ThrissurDeepDive />
+      {/* 5 — Thrissur Deep Dive */}
+      <div id="thrissur-deep-dive">
+        <ThrissurDeepDive />
+      </div>
 
-      {/* 6 — One Vote at a Time: Human section */}
+      {/* 6 — The Sabarimala Effect: 2018 → 2019 swing analysis */}
+      <SabarimaIaEffect />
+
+      {/* 7 — One Vote at a Time: Human section */}
       <OneVoteAtATime />
 
-      {/* 7 — Shareable Moments */}
+      {/* 8 — Shareable Moments */}
       <ShareableMoments />
 
-      {/* 8 — Growth charts + 2025 TVM banner + 2024 Thrissur card */}
-      <GrowthSection />
+      {/* 9 — Growth charts + 2025 TVM banner + 2024 Thrissur card */}
+      <div id="growth-section">
+        <GrowthSection />
+      </div>
 
-      {/* 9 — Grassroots Growth: The 1919 ward silent revolution (2010-2025) */}
-      <GrassrootsGrowth />
+      {/* 10 — First Mayor story: V.V. Rajesh & TVM 2025 */}
+      <FirstMayorBanner />
 
-      {/* 10 — Vote Shift Flow: The erosion of the duopoly */}
+      {/* 11 — Grassroots Growth: The 1919 ward silent revolution (2010–2025) */}
+      <div id="grassroots-growth">
+        <GrassrootsGrowth />
+      </div>
+
+      {/* 12 — Vote Shift Flow: The erosion of the duopoly */}
       <VoteShiftFlow />
 
-      {/* 11 — District-wise strength tiles */}
-      <DistrictStrength />
+      {/* 13 — District-wise strength tiles */}
+      <div id="district-strength">
+        <DistrictStrength />
+      </div>
 
-      {/* 12 — Election Sandbox: Predict 2026 results */}
-      <ElectionSandbox />
+      {/* 14 — Election Sandbox: Predict 2026 results */}
+      <div id="election-sandbox">
+        <ElectionSandbox />
+      </div>
 
-      {/* 13 — "They Said It Would Never Happen" opposition claims */}
+      {/* 15 — "They Said It Would Never Happen" opposition claims */}
       <OppositionClaims />
 
-      {/* 14 — Vertical timeline: Zero to One */}
-      <EventTimeline />
+      {/* 16 — Vertical timeline: Zero to One */}
+      <div id="event-timeline">
+        <EventTimeline />
+      </div>
 
-      <footer className="py-20 border-t text-center text-sm"
-        style={{ borderColor: "rgba(255,153,51,0.05)", color: "rgba(255,200,120,0.2)" }}>
-        <p className="font-heading font-black tracking-widest text-[10px] uppercase mb-4 opacity-50">Keralam&apos;s Saffron Dawn</p>
-        <p className="max-w-md mx-auto opacity-40">All electoral data sourced from the Election Commission of India and verified national news reports.</p>
-        <p className="mt-4 opacity-30 italic">Developed for accuracy, transparency, and data-driven journalism.</p>
-      </footer>
+      {/* The Manifesto — Closing Sequence */}
+      <Manifesto />
+
+      {/* Rich Footer */}
+      <SiteFooter />
     </main>
   );
 }

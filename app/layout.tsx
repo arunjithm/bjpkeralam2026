@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
+import { Montserrat, Source_Sans_3, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
+const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-source" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
@@ -18,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
-      <body className="font-sans bg-dark-900 text-white min-h-screen selection:bg-bjp-saffron selection:text-white">
+    <html lang="en" className={`${montserrat.variable} ${sourceSans.variable} ${playfair.variable} ${jetbrains.variable}`}>
+      <body className="font-sans bg-white text-neutral-900 min-h-screen selection:bg-bjp-saffron selection:text-white theme-saffron">
         <Navbar />
         {children}
       </body>
